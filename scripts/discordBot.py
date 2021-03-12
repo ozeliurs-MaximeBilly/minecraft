@@ -5,7 +5,7 @@ import time
 import psutil
 
 installPath = "/root/minecraft"
-help = "Voici la liste des commandes : \n$help : Afficher ce message.\n$ping : Tester si le bot fonctionne.\n$tps <nom_du_serv> : Afficher le tps du serveur"
+help = "Voici la liste des commandes : \n$help : Afficher ce message.\n$ping : Tester si le bot fonctionne.\n$tps <nom_du_serv> : Afficher le tps du serveur\n$start <nom_du_serv> : Demarrer le serveur\n$stop <nom_du_serv> : Arreter le serveur\n$restart <nom_du_serv> : Redemarrer le serveur\n$backup <nom_du_serv> : Faire un backup du serveur\n$cpu : Afficher l'utilisation globale du serveur."
 
 def getServers():
     servers = subprocess.check_output(('ls '+installPath+'/').split(" "))
