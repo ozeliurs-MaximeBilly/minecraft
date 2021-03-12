@@ -72,7 +72,7 @@ async def on_message(message):
 
         if server in servers:
             os.system(installPath + "/scripts/restartd.sh " + server)
-            await message.reply("Backup de " + server + " en cours ...")
+            await message.reply("Redemarrage de " + server + " en cours ...")
         else:
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
 
@@ -85,7 +85,7 @@ async def on_message(message):
 
         if server in servers:
             os.system(installPath + "/scripts/startd.sh " + server)
-            await message.reply("Backup de " + server + " en cours ...")
+            await message.reply("Demarrage de " + server + " en cours ...")
         else:
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
 
@@ -98,7 +98,7 @@ async def on_message(message):
 
         if server in servers:
             os.system(installPath + "/scripts/stopd.sh " + server)
-            await message.reply("Backup de " + server + " en cours ...")
+            await message.reply("Arret de " + server + " en cours ...")
         else:
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
 
