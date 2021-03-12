@@ -28,7 +28,8 @@ then
 		sleep 2s
 		screen -R "$SERV" -X stuff "stop $(printf "\r")"
 	done
-
+	
+	echo "On attends que les serveurs s'eteignent."
 	sleep 30s
 
 	for SERV in `ls $server_path | grep ".mc"`
@@ -74,7 +75,7 @@ else
 		screen -R "$SERV" -X stuff "stop $(printf "\r")"
 	done
 	
-	echo "On attends que les serveurs d'eteignent."
+	echo "On attends que les serveurs s'eteignent."
 	sleep 30s
 
 	for SERV in "$@"
