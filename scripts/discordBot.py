@@ -2,6 +2,7 @@ import discord
 import os
 import subprocess
 import time
+import psutil
 
 installPath = "/root/minecraft"
 help = "Voici la liste des commandes : \n$help : Afficher ce message.\n$ping : Tester si le bot fonctionne.\n$tps <nom_du_serv> : Afficher le tps du serveur"
@@ -101,6 +102,10 @@ async def on_message(message):
             await message.reply("Arret de " + server + " en cours ...")
         else:
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
+    
+    if message.content.startswith('$cpu'):
+        await message.reply("Le CPU est a " + str(psutil.cpu_percent(10) + "% sur les 10 dernières secondes.") 
+
 
 # Main
 try:
