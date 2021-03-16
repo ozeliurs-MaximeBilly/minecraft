@@ -104,7 +104,7 @@ async def on_message(message):
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
     
     if message.content.startswith('$cpu'):
-        await message.reply("Le CPU est a " + str(psutil.cpu_percent(10) + "% sur les 10 dernières secondes.") 
+        await message.reply("Le CPU est a " + str(psutil.cpu_percent(10)) + "% sur les 10 dernières secondes.") 
 
 
 # Main
