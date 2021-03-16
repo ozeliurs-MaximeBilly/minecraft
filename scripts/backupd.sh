@@ -106,3 +106,8 @@ else
     	echo "Serveurs en cours de démarrage ..."
 
 fi
+
+if [ "$STY" ];
+then
+        screen -X -R "$STY" quit
+fi
