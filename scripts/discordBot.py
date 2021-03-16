@@ -59,7 +59,7 @@ async def on_message(message):
         servers = getServers()
 
         if server in servers:
-            os.system(installPath + "/scripts/backupd.sh "+server)
+            os.system(installPath + '/scripts/async.sh "' + installPath + "/scripts/backupd.sh "+server + '"')
             await message.reply("Backup de "+server+" en cours ...")
         else:
             await message.reply("Les serveurs disponibles sont :\n" + "\n".join(servers))
