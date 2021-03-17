@@ -88,7 +88,7 @@ else
 			echo "$backup_path/$SERV doesent exist. Creating it ..."
     			mkdir $backup_path/$SERV
     		fi
-		src="$server_path/$SERV"
+		src="$server_path/$SERV/*"
 		dest="$backup/$SERV/backup-$(date +%F\ -\ %Hh).tar.gz"
 	
 		echo "backup de ($src) sur ($dest)."
